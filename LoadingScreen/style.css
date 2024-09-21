@@ -1,0 +1,146 @@
+/* Color */
+
+:root {
+    --white: #fff;
+    --gray: #bbc1c5;
+    --green: #4a773c;
+    --brown: #6f4f28;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray);
+    border-radius: 10px;
+}
+
+.viewall {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* All Section in Website START */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    padding: 0;
+    font-family: 'Minecraft', sans-serif;
+}
+
+body {
+    overflow-x: hidden;  
+}
+
+/* Loading Page */
+
+#loadingScreen {
+    background: url(../assets/Others/loadingScreen.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    transition: 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Progress Bar */
+
+#bar {
+    width: 20rem;
+    background-color: var(--gray);
+}
+
+.progressBar {
+    background-color: var(--white);
+    width: 5%;
+    height: 14px;
+}
+
+/* Help Box */
+
+#helpBox {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--green);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 300px;
+    z-index: 10;
+}
+
+#helpBox h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+#helpBox ul li {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+}
+
+/* Cloud */
+
+@keyframes moveLeft {
+    from { right: -15% }
+    to { right: 100%; }
+}
+
+@keyframes moveRight {
+    from { left: -15% }
+    to { left: 100% }
+}
+
+.cloud {
+    width: 160px;
+    height: 120px;
+}
+
+.cloud1 {
+    position: fixed;
+    top: 25px;
+    left: 55px;
+    animation: moveRight 10s infinite;
+}
+
+.cloud2 {
+    transform: scaleX(-1);
+    position: fixed;
+    bottom: 25px;
+    right: 55px;
+    animation: moveLeft 10s infinite;
+}
+
+/* Dark Mode */
+
+#loadingScreen.dark {
+    background: url(../assets/Others/loadingScreen.jpg);
+    /* Kalau mau background yang beda */
+    /* background: url(../assets/Others/loadingScreen2.avif); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    transition: 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
